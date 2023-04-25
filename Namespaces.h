@@ -43,6 +43,10 @@ using namespace std;
 			return pow(Value1, Value2);
 		}
 		if (Operation == '%') {
+			if (static_cast<int>(Value2) == 0)
+			{
+				return EXIT_FAILURE;
+			}
 			return  static_cast<int>(Value1) % static_cast<int>(Value2);
 		}
 	}
